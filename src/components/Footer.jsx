@@ -16,6 +16,7 @@ const Footer = () => {
 const styles = {
   footer: {
     backgroundColor: '#2c3e50',
+    
     color: 'white',
     textAlign: 'center',
     padding: '1rem',
@@ -25,7 +26,7 @@ const styles = {
     marginTop: '0.5rem'
   },
   socialLink: {
-    color: '#dd0f91',
+    color: '#1abc9c',
     margin: '0 0.5rem',
     textDecoration: 'none'
   }

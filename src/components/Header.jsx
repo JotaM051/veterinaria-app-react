@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.avif";
-  //se  presenta un nuevo logo mas detallado 2/2/2026
+
+//Se presenta un nuevo logo mejorado
 const Header = () => {
   return (
     <header style={styles.header}>
@@ -23,6 +24,7 @@ const Header = () => {
           <span>Veterinaria Web</span>
         </Link>
       </div>
+
       <nav>
         <ul style={styles.navList}>
           <li>
@@ -46,7 +48,6 @@ const Header = () => {
   );
 };
 
-// ESTILOS ORIGINALES
 const styles = {
   header: {
     display: "flex",
@@ -66,6 +67,8 @@ const styles = {
     display: "flex",
     listStyle: "none",
     gap: "1.5rem",
+    margin: 0,
+    padding: 0,
   },
   link: {
     color: "white",
