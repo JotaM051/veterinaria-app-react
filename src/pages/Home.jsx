@@ -63,6 +63,7 @@ const styles = {
     borderRadius: '10px',
     textAlign: 'center',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+   
   },
   number: {
     fontSize: '2rem',
