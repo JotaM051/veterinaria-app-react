@@ -6,7 +6,7 @@ const Home = () => {
   const [client, setClient] = useState(mockData.client);
   const { pets } = mockData;
 
-  // SOLO ESTA LÍNEA NUEVA - carga datos guardados
+
   useEffect(() => {
     const savedData = localStorage.getItem('vetClient');
     if (savedData) {
@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Bienvenido, {client.name}! 👋</h1>
+      <h1 style={styles.title}>Bienvenido, {client.name}! </h1>
       
       <div style={styles.summary}>
         <div style={styles.card}>
@@ -32,14 +32,14 @@ const Home = () => {
       </div>
 
       <div style={styles.quickLinks}>
-        <Link to="/pets" style={styles.button}>🐕 Mis Mascotas</Link>
-        <Link to="/profile" style={styles.button}>👤 Mi Perfil</Link>
+        <Link to="/pets" style={styles.button}>Mis Mascotas</Link>
+        <Link to="/profile" style={styles.button}>Mi Perfil</Link>
       </div>
     </div>
   );
 };
 
-// ESTILOS ORIGINALES (igual que antes)
+
 const styles = {
   container: {
     padding: '2rem',

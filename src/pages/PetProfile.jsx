@@ -6,10 +6,8 @@ const PetProfile = () => {
   const { id } = useParams();
   const [activeTab, setActiveTab] = useState('summary');
   
-  // Buscar mascota por ID
   const pet = mockData.pets.find(p => p.id === parseInt(id)) || mockData.pets[0];
   
-  // Filtrar vacunas y consultas de esta mascota
   const petVaccines = mockData.vaccines.filter(v => v.petId === parseInt(id));
   const petAppointments = mockData.appointments.filter(a => a.petId === parseInt(id));
 
@@ -21,7 +19,7 @@ const PetProfile = () => {
       
       <div className="card">
         <div style={styles.header}>
-          <h1>{pet.name} 🐾</h1>
+          <h1>{pet.name} </h1>
           <span style={styles.speciesBadge}>{pet.species}</span>
         </div>
         
@@ -46,7 +44,6 @@ const PetProfile = () => {
           </button>
         </div>
         
-        {/* Contenido de las tabs */}
         <div style={styles.tabContent}>
           {activeTab === 'summary' && (
             <div>

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header style={styles.header}>
       <div className="logo">
-        <Link to="/" style={styles.logoLink}>🐾 Veterinaria Web</Link>
+        <Link to="/" style={styles.logoLink}>Veterinaria Web</Link>
       </div>
       <nav>
         <ul style={styles.navList}>
@@ -18,7 +18,6 @@ const Header = () => {
   );
 };
 
-// ESTILOS ORIGINALES
 const styles = {
   header: {
     display: 'flex',

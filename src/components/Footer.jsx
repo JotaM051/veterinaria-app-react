@@ -3,7 +3,6 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer style={styles.footer}>
-      <p>© 2026 Veterinaria Web. Todos los derechos reservados.</p>
       <div style={styles.social}>
         <a href="#" style={styles.socialLink}>Facebook</a> | 
         <a href="#" style={styles.socialLink}>Instagram</a> | 
