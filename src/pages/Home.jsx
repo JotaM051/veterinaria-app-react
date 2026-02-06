@@ -16,24 +16,24 @@ const Home = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Bienvenido, {client.name}! </h1>
+      <h1 style={styles.title}>Bienvenido, {client.name}! 👋</h1>
       
       <div style={styles.summary}>
         <div style={styles.card}>
           <h3>Mascotas Registradas</h3>
           <p style={styles.number}>{pets.length}</p>
         </div>
-        
+
         <div style={styles.card}>
           <h3>Próxima Cita</h3>
           <p style={styles.number}>20 Feb 2025</p>
-          <small>Control anual - Dr. Rodríguez</small>
+          <small>Control anual – Dr. Rodríguez</small>
         </div>
       </div>
 
       <div style={styles.quickLinks}>
-        <Link to="/pets" style={styles.button}>Mis Mascotas</Link>
-        <Link to="/profile" style={styles.button}>Mi Perfil</Link>
+        <Link to="/pets" style={styles.button}>🐕 Mis Mascotas</Link>
+        <Link to="/profile" style={styles.button}>👤 Mi Perfil</Link>
       </div>
     </div>
   );
@@ -48,7 +48,8 @@ const styles = {
   },
   title: {
     color: '#2c3e50',
-    marginBottom: '2rem'
+    marginBottom: '2rem',
+    textAlign: 'center'
   },
   summary: {
     display: 'flex',
@@ -57,10 +58,11 @@ const styles = {
   },
   card: {
     flex: 1,
-    backgroundColor: '#ecf0f1',
+    backgroundColor: '#ffffff',
     padding: '1.5rem',
     borderRadius: '10px',
-    textAlign: 'center'
+    textAlign: 'center',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
   },
   number: {
     fontSize: '2rem',
@@ -74,7 +76,7 @@ const styles = {
     justifyContent: 'center'
   },
   button: {
-    backgroundColor: '#3498db',
+    backgroundColor: '#13454b',
     color: 'white',
     padding: '0.8rem 1.5rem',
     borderRadius: '5px',

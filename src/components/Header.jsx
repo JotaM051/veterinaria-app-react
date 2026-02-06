@@ -1,17 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.avif";
+
 
 const Header = () => {
   return (
     <header style={styles.header}>
       <div className="logo">
-        <Link to="/" style={styles.logoLink}>Veterinaria Web</Link>
+        <Link to="/" style={styles.logoLink}>🐾 Veterinaria Web</Link>
       </div>
+
       <nav>
         <ul style={styles.navList}>
-          <li><Link to="/" style={styles.link}>Home</Link></li>
-          <li><Link to="/pets" style={styles.link}>Mis Mascotas</Link></li>
-          <li><Link to="/profile" style={styles.link}>Mi Perfil</Link></li>
+          <li>
+            <Link to="/" style={styles.link}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/pets" style={styles.link}>
+              Mis Mascotas
+            </Link>
+          </li>
+          <li>
+            <Link to="/profile" style={styles.link}>
+              Mi Perfil
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
@@ -20,29 +35,31 @@ const Header = () => {
 
 const styles = {
   header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '1rem 2rem',
-    backgroundColor: '#2c3e50',
-    color: 'white'
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "1rem 2rem",
+    backgroundColor: "#2c3e50",
+    color: "white",
   },
   logoLink: {
-    color: 'white',
-    textDecoration: 'none',
-    fontSize: '1.5rem',
-    fontWeight: 'bold'
+    color: "white",
+    textDecoration: "none",
+    fontSize: "1.5rem",
+    fontWeight: "bold",
   },
   navList: {
-    display: 'flex',
-    listStyle: 'none',
-    gap: '1.5rem'
+    display: "flex",
+    listStyle: "none",
+    gap: "1.5rem",
+    margin: 0,
+    padding: 0,
   },
   link: {
-    color: 'white',
-    textDecoration: 'none',
-    fontWeight: '500'
-  }
+    color: "white",
+    textDecoration: "none",
+    fontWeight: "500",
+  },
 };
 
 export default Header;

@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #f5f7fa;
-  color: #333;
+  background-color: #3d0033;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -36,7 +36,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-  background-color: #2980b9;
+  background-color: #1abc9c;
 }
 
 button:disabled {
@@ -145,18 +145,18 @@ input:focus, select:focus, textarea:focus {
 
 
 h1 {
-  color: #2c3e50;
+  color: #19bbcd;
   margin-bottom: 20px;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #307eb2;
   padding-bottom: 10px;
 }
 
 h2 {
-  color: #34495e;
+  color: #19bbcd;
   margin-bottom: 15px;
 }
 
 h3 {
-  color: #7f8c8d;
+  color: #19bbcd;
   margin-bottom: 10px;
 }
