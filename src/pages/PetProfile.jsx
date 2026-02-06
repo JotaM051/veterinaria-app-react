@@ -4,19 +4,17 @@ import { mockData } from "../data/mockData";
 
 const PetProfile = () => {
   const { id } = useParams();
+  const petId = Number(id);
   const [activeTab, setActiveTab] = useState("summary");
 
   // Buscar mascota por ID
-  // const pet = mockData.pets.find(p => p.id === parseInt(id)) || mockData.pets[0]; linea anterior no validaba
+  const pet = mockData.pets.find((p) => p.id === petId);
 
-  //cambio en linea hecho el 2/2/2026
-
-  const pet = mockData.pets.find((p) => p.id === Number(id));
-//se incluye data-cy para que el boton sea encontrado mas facilemente por Cypress
+  // Si el ID no existe, mostrar mensaje y permitir volver
   if (!pet) {
     return (
       <div className="container">
-        <Link to="/pets" className="btn" data-cy="btn-back-pets">  
+        <Link to="/pets" className="btn" data-cy="btn-back-pets">
           ← Volver
         </Link>
 
@@ -29,79 +27,74 @@ const PetProfile = () => {
   }
 
   // Filtrar vacunas y consultas de esta mascota
-  const petVaccines = mockData.vaccines.filter((v) => v.petId === parseInt(id));
-  const petAppointments = mockData.appointments.filter(
-    (a) => a.petId === parseInt(id),
-  );
+  const petVaccines = mockData.vaccines.filter((v) => v.petId === petId);
+  const petAppointments = mockData.appointments.filter((a) => a.petId === petId);
 
   return (
     <div className="container">
       <Link
         to="/pets"
-        style={{
-          color: "#3498db",
-          textDecoration: "none",
-          marginBottom: "20px",
-          display: "block",
-        }}
+        className="btn"
+        style={{ display: "inline-block", marginBottom: "20px" }}
       >
         ← Volver a Mis Mascotas
       </Link>
 
       <div className="card">
         <div style={styles.header}>
-          <h1>{pet.name} 🐾</h1>
+          <h1 style={{ margin: 0 }}>{pet.name} 🐾</h1>
           <span style={styles.speciesBadge}>{pet.species}</span>
         </div>
 
-        {/* Tabs/Navegación */}
+        {/* Tabs */}
         <div style={styles.tabs}>
           <button
             style={activeTab === "summary" ? styles.activeTab : styles.tab}
             onClick={() => setActiveTab("summary")}
+            type="button"
           >
             Resumen
           </button>
           <button
             style={activeTab === "vaccines" ? styles.activeTab : styles.tab}
             onClick={() => setActiveTab("vaccines")}
+            type="button"
           >
             Vacunas
           </button>
           <button
             style={activeTab === "appointments" ? styles.activeTab : styles.tab}
             onClick={() => setActiveTab("appointments")}
+            type="button"
           >
             Consultas
           </button>
         </div>
 
-        {/* Contenido de las tabs */}
+        {/* Contenido */}
         <div style={styles.tabContent}>
           {activeTab === "summary" && (
-            <div>
-              <div style={styles.infoGrid}>
-                <div style={styles.infoItem}>
-                  <strong>Nombre:</strong> {pet.name}
-                </div>
-                <div style={styles.infoItem}>
-                  <strong>Especie:</strong> {pet.species}
-                </div>
-                <div style={styles.infoItem}>
-                  <strong>Raza:</strong> {pet.breed}
-                </div>
-                <div style={styles.infoItem}>
-                  <strong>Edad:</strong> {pet.age} años
-                </div>
-                <div style={styles.infoItem}>
-                  <strong>Peso:</strong> {pet.weight} kg
-                </div>
-                <div style={styles.infoItem}>
-                  <strong>Alergias:</strong> {pet.allergies.join(", ")}
-                </div>
-                <div style={styles.infoItem}>
-                  <strong>Estado:</strong> {pet.status}
-                </div>
+            <div style={styles.infoGrid}>
+              <div style={styles.infoItem}>
+                <strong>Nombre:</strong> {pet.name}
+              </div>
+              <div style={styles.infoItem}>
+                <strong>Especie:</strong> {pet.species}
+              </div>
+              <div style={styles.infoItem}>
+                <strong>Raza:</strong> {pet.breed}
+              </div>
+              <div style={styles.infoItem}>
+                <strong>Edad:</strong> {pet.age} años
+              </div>
+              <div style={styles.infoItem}>
+                <strong>Peso:</strong> {pet.weight} kg
+              </div>
+              <div style={styles.infoItem}>
+                <strong>Alergias:</strong> {pet.allergies.join(", ")}
+              </div>
+              <div style={styles.infoItem}>
+                <strong>Estado:</strong> {pet.status}
               </div>
             </div>
           )}
@@ -113,7 +106,7 @@ const PetProfile = () => {
                 <ul style={styles.list}>
                   {petVaccines.map((vaccine) => (
                     <li key={vaccine.id} style={styles.listItem}>
-                      <strong>{vaccine.name}</strong> - Aplicada: {vaccine.date}
+                      <strong>{vaccine.name}</strong> — Aplicada: {vaccine.date}
                     </li>
                   ))}
                 </ul>
@@ -130,7 +123,7 @@ const PetProfile = () => {
                 <ul style={styles.list}>
                   {petAppointments.map((app) => (
                     <li key={app.id} style={styles.listItem}>
-                      <strong>{app.date}</strong> - {app.reason} (Dr. {app.vet})
+                      <strong>{app.date}</strong> — {app.reason} (Dr. {app.vet})
                     </li>
                   ))}
                 </ul>
