@@ -25,7 +25,6 @@ const PetProfile = () => {
           <span style={styles.speciesBadge}>{pet.species}</span>
         </div>
         
-        {/* Tabs/Navegación */}
         <div style={styles.tabs}>
           <button 
             style={activeTab === 'summary' ? styles.activeTab : styles.tab}
