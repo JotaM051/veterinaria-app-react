@@ -6,7 +6,7 @@ const Home = () => {
   const [client, setClient] = useState(mockData.client);
   const { pets } = mockData;
 
-  // Cargar datos del cliente desde LocalStorage (si existen)
+
   useEffect(() => {
     const savedData = localStorage.getItem('vetClient');
     if (savedData) {
@@ -16,10 +16,8 @@ const Home = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>
-        Bienvenido, {client.name}! 👋
-      </h1>
-
+      <h1 style={styles.title}>Bienvenido, {client.name}! 👋</h1>
+      
       <div style={styles.summary}>
         <div style={styles.card}>
           <h3>Mascotas Registradas</h3>
@@ -34,16 +32,13 @@ const Home = () => {
       </div>
 
       <div style={styles.quickLinks}>
-        <Link to="/pets" style={styles.button}>
-          🐕 Mis Mascotas
-        </Link>
-        <Link to="/profile" style={styles.button}>
-          👤 Mi Perfil
-        </Link>
+        <Link to="/pets" style={styles.button}>🐕 Mis Mascotas</Link>
+        <Link to="/profile" style={styles.button}>👤 Mi Perfil</Link>
       </div>
     </div>
   );
 };
+
 
 const styles = {
   container: {

@@ -2,27 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.avif";
 
-//Se presenta un nuevo logo mejorado
+
 const Header = () => {
   return (
     <header style={styles.header}>
       <div className="logo">
-        <Link
-          to="/"
-          style={{
-            ...styles.logoLink,
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <img
-            src={logo}
-            alt="Veterinaria Web"
-            style={{ height: "36px", objectFit: "contain" }}
-          />
-          <span>Veterinaria Web</span>
-        </Link>
+        <Link to="/" style={styles.logoLink}>🐾 Veterinaria Web</Link>
       </div>
 
       <nav>

@@ -10,7 +10,7 @@ const PetProfile = () => {
   // Buscar mascota por ID
   const pet = mockData.pets.find((p) => p.id === petId);
 
-  // Si el ID no existe, mostrar mensaje y permitir volver
+  //  ID no existe, muestra mensaje y permite regresar
   if (!pet) {
     return (
       <div className="container">
@@ -26,7 +26,7 @@ const PetProfile = () => {
     );
   }
 
-  // Filtrar vacunas y consultas de esta mascota
+  // Filtrar vacunas y consultas de  mascota
   const petVaccines = mockData.vaccines.filter((v) => v.petId === petId);
   const petAppointments = mockData.appointments.filter((a) => a.petId === petId);
 

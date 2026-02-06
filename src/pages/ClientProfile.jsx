@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { mockData } from '../data/mockData';
 
 const ClientProfile = () => {
-  // Cargar datos iniciales
   const [client, setClient] = useState(mockData.client);
   const [isEditing, setIsEditing] = useState(false);
   const [message, setMessage] = useState('');
   const [tempData, setTempData] = useState({});
 
-  // Cargar datos guardados de LocalStorage al inicio
   useEffect(() => {
     const savedData = localStorage.getItem('vetClient');
     if (savedData) {
@@ -22,12 +20,10 @@ const ClientProfile = () => {
   };
 
   const handleSave = () => {
-    // Guardar en LocalStorage
     localStorage.setItem('vetClient', JSON.stringify(client));
     setIsEditing(false);
     setMessage('¡Cambios guardados exitosamente!');
     
-    // Forzar recarga en otras pestañas (opcional)
     window.dispatchEvent(new Event('storage'));
     
     setTimeout(() => setMessage(''), 3000);
@@ -47,7 +43,7 @@ const ClientProfile = () => {
 
   return (
     <div className="container">
-      <h1>Mi Perfil 👤</h1>
+      <h1>Mi Perfil </h1>
       
       {message && (
         <div className="success" style={{ backgroundColor: '#2ecc71', color: 'white', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
@@ -99,25 +95,19 @@ const ClientProfile = () => {
           <div style={styles.buttonGroup}>
             {!isEditing ? (
               <button onClick={handleEdit} className="btn" style={styles.button}>
-                ✏️ Editar Perfil
+                 Editar Perfil
               </button>
             ) : (
               <>
                 <button onClick={handleSave} className="btn" style={{ ...styles.button, backgroundColor: '#2ecc71' }}>
-                  💾 Guardar Cambios
+                   Guardar Cambios
                 </button>
                 <button onClick={handleCancel} className="btn" style={{ ...styles.button, backgroundColor: '#e74c3c' }}>
-                  ❌ Cancelar
+                   Cancelar
                 </button>
               </>
             )}
           </div>
-        </div>
-        
-        <div style={styles.infoSection}>
-          <h3>📊 Información adicional</h3>
-          <p>Los cambios se guardan automáticamente en tu navegador (LocalStorage).</p>
-          <p>Esta es una simulación - en una app real estos datos se guardarían en una base de datos segura.</p>
         </div>
       </div>
     </div>

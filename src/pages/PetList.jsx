@@ -7,7 +7,7 @@ const PetList = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Mis Mascotas 🐾</h1>
+      <h1 style={styles.title}>Mis Mascotas </h1>
       
       <div style={styles.petGrid}>
         {pets.map(pet => (
