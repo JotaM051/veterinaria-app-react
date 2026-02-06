@@ -44,7 +44,8 @@ const styles = {
     padding: '1.5rem',
     borderRadius: '10px',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-    border: '1px solid #ddd'
+    border: '1px solid #ddd',
+    color: '#2c3e50'
   },
   detailLink: {
     display: 'inline-block',
