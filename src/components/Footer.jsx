@@ -7,6 +7,7 @@ const Footer = () => {
         <a href="#" style={styles.socialLink}>Facebook</a> | 
         <a href="#" style={styles.socialLink}>Instagram</a> | 
         <a href="#" style={styles.socialLink}>Twitter</a>
+        <a href="#" style={styles.socialLink}>© 2026 Veterinaria Web. Todos los derechos reservados.</a>
       </div>
     </footer>
   );
