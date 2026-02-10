@@ -31,7 +31,7 @@ const styles = {
     margin: '0 auto'
   },
   title: {
-    color: '#2c3e50',
+    color: '#0d71d4',
     marginBottom: '2rem'
   },
   petGrid: {

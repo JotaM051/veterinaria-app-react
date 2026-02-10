@@ -7,10 +7,8 @@ const PetProfile = () => {
   const petId = Number(id);
   const [activeTab, setActiveTab] = useState("summary");
 
-  // Buscar mascota por ID
   const pet = mockData.pets.find((p) => p.id === petId);
 
-  //  ID no existe, muestra mensaje y permite regresar
   if (!pet) {
     return (
       <div className="container">
@@ -26,7 +24,6 @@ const PetProfile = () => {
     );
   }
 
-  // Filtrar vacunas y consultas de  mascota
   const petVaccines = mockData.vaccines.filter((v) => v.petId === petId);
   const petAppointments = mockData.appointments.filter((a) => a.petId === petId);
 
@@ -42,7 +39,7 @@ const PetProfile = () => {
 
       <div className="card">
         <div style={styles.header}>
-          <h1 style={{ margin: 0 }}>{pet.name} 🐾</h1>
+          <h1 style={{ margin: 0 }}>{pet.name} </h1>
           <span style={styles.speciesBadge}>{pet.species}</span>
         </div>
 

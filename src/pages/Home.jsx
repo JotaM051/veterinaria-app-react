@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Bienvenido, {client.name}! 👋</h1>
+      <h1 style={styles.title}>Bienvenido, {client.name}! </h1>
       
       <div style={styles.summary}>
         <div style={styles.card}>
@@ -32,8 +32,8 @@ const Home = () => {
       </div>
 
       <div style={styles.quickLinks}>
-        <Link to="/pets" style={styles.button}>🐕 Mis Mascotas</Link>
-        <Link to="/profile" style={styles.button}>👤 Mi Perfil</Link>
+        <Link to="/pets" style={styles.button}> Mis Mascotas</Link>
+        <Link to="/profile" style={styles.button}> Mi Perfil</Link>
       </div>
     </div>
   );
@@ -47,7 +47,7 @@ const styles = {
     margin: '0 auto'
   },
   title: {
-    color: '#2c3e50',
+    color: '#0d71d4',
     marginBottom: '2rem',
     textAlign: 'center'
   },
