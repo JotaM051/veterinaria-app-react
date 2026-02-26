@@ -23,8 +23,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/profile" style={styles.link}>
-              Mi Perfil
+            <Link to="/profile" style={styles.link}>Mi Perfil
             </Link>
           </li>
         </ul>

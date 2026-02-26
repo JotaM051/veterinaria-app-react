@@ -43,7 +43,7 @@ const ClientProfile = () => {
 
   return (
     <div className="container">
-      <h1>Mi Perfil </h1>
+      <h1>Mi Perfil</h1>
       
       {message && (
         <div className="success" style={{ backgroundColor: '#2ecc71', color: 'white', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
@@ -94,16 +94,13 @@ const ClientProfile = () => {
           
           <div style={styles.buttonGroup}>
             {!isEditing ? (
-              <button onClick={handleEdit} className="btn" style={styles.button}>
-                 Editar Perfil
+              <button onClick={handleEdit} className="btn" style={styles.button}>Editar Perfil
               </button>
             ) : (
               <>
-                <button onClick={handleSave} className="btn" style={{ ...styles.button, backgroundColor: '#2ecc71' }}>
-                   Guardar Cambios
+                <button onClick={handleSave} className="btn" style={{ ...styles.button, backgroundColor: '#2ecc71' }}>Guardar Cambios
                 </button>
-                <button onClick={handleCancel} className="btn" style={{ ...styles.button, backgroundColor: '#e74c3c' }}>
-                   Cancelar
+                <button onClick={handleCancel} className="btn" style={{ ...styles.button, backgroundColor: '#e74c3c' }}>Cancelar
                 </button>
               </>
             )}

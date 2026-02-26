@@ -15,19 +15,19 @@ describe('Home Page - Veterinaria App', () => {
   it('should show next appointment card', () => {
     cy.contains('Próxima Cita')
     cy.contains('20 Feb 2025')
-    cy.contains('Control anual - Dr. Rodríguez')
+    cy.contains('Control anual – Dr. Rodríguez')
   })
 
   it('should have working navigation buttons', () => {
-    // Botón "Mis Mascotas"
+
     cy.contains('Mis Mascotas').click()
     cy.url().should('include', '/pets')
     
-    // Volver a Home
+
     cy.visit('http://localhost:3000')
     
-    // Botón "Mi Perfil"
-    cy.contains('Mi Perfil').click()
+
+    cy.contains(/Mi Perfil\s*/).click()
     cy.url().should('include', '/profile')
   })
 

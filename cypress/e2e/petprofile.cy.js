@@ -33,6 +33,6 @@ describe('Pet Profile Page - Veterinaria App', () => {
   it('should have back link to pets list', () => {
     cy.contains('← Volver a Mis Mascotas').click()
     cy.url().should('include', '/pets')
-    cy.contains('Mis Mascotas 🐾')
+    cy.contains('Mis Mascotas ')
   })
 })

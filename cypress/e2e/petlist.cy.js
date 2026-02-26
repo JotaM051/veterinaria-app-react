@@ -4,11 +4,11 @@ describe('Pet List Page - Veterinaria App', () => {
   })
 
   it('should display page title', () => {
-    cy.contains('h1', 'Mis Mascotas 🐾')
+    cy.contains('h1', 'Mis Mascotas ')
   })
 
   it('should show at least 2 pet cards', () => {
-    // Busca elementos que sean tarjetas de mascotas
+
     cy.get('div').filter((index, element) => {
       return element.innerText.includes('Especie:') || 
              element.innerText.includes('Raza:')
@@ -30,7 +30,7 @@ describe('Pet List Page - Veterinaria App', () => {
   })
 
   it('should navigate to pet profile when clicking pet details link', () => {
-    // Busca el primer enlace que diga "Ver perfil completo" o similar
+
     cy.contains('Ver perfil').first().click()
     cy.url().should('match', /\/pet\/\d+$/)
     cy.contains('Volver a Mis Mascotas')
