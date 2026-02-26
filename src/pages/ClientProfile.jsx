@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { mockData } from '../data/mockData';
 
-const ClientProfile = () => {
+  const ClientProfile = () => {
   const [client, setClient] = useState(mockData.client);
   const [isEditing, setIsEditing] = useState(false);
   const [message, setMessage] = useState('');

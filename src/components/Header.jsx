@@ -12,21 +12,9 @@ const Header = () => {
 
       <nav>
         <ul style={styles.navList}>
-          <li>
-            <Link to="/" style={styles.link}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/pets" style={styles.link}>
-              Mis Mascotas
-            </Link>
-          </li>
-          <li>
-            <Link to="/profile" style={styles.link}>
-              Mi Perfil
-            </Link>
-          </li>
+          <li> <Link to="/" style={styles.link}> Home </Link> </li>
+          <li> <Link to="/pets" style={styles.link}>  Mis Mascotas </Link> </li>
+          <li> <Link to="/profile" style={styles.link}> Mi Perfil </Link> </li>
         </ul>
       </nav>
     </header>
