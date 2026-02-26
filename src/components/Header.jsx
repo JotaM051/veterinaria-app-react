@@ -10,30 +10,25 @@ const Header = () => {
         <Link to="/" style={styles.logoLink}> Veterinaria Web</Link>
       </div>
 
-      <nav>
-        <ul style={styles.navList}>
-<<<<<<< HEAD
-          <li>
-            <Link to="/" style={styles.link}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/pets" style={styles.link}>
-              Mis Mascotas
-            </Link>
-          </li>
-          <li>
-            <Link to="/profile" style={styles.link}>Mi Perfil
-            </Link>
-          </li>
-=======
-          <li> <Link to="/" style={styles.link}> Home </Link> </li>
-          <li> <Link to="/pets" style={styles.link}>  Mis Mascotas </Link> </li>
-          <li> <Link to="/profile" style={styles.link}> Mi Perfil </Link> </li>
->>>>>>> 7732eb254583fb697230297c0d62e583689d27d8
-        </ul>
-      </nav>
+<nav>
+  <ul style={styles.navList}>
+    <li>
+      <Link to="/" style={styles.link}>
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link to="/pets" style={styles.link}>
+        Mis Mascotas
+      </Link>
+    </li>
+    <li>
+      <Link to="/profile" style={styles.link}>
+        Mi Perfil
+      </Link>
+    </li>
+  </ul>
+</nav>
     </header>
   );
 };
