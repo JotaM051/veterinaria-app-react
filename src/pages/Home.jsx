@@ -27,7 +27,7 @@ const Home = () => {
         <div style={styles.card}>
           <h3>Próxima Cita</h3>
           <p style={styles.number}>20 Feb 2025</p>
-          <small>Control anual – Dr. Rodríguez</small>
+          <small>Control anual - Dr. Rodríguez</small>
         </div>
       </div>
 
